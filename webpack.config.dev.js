@@ -5,6 +5,7 @@ module.exports = {
   devtool: 'cheap-module-eval-source-map',
   entry: [
     'webpack-hot-middleware/client',
+    'whatwg-fetch',
     './src/client/index',
   ],
   output: {
@@ -23,14 +24,13 @@ module.exports = {
         test: /\.scss$/,
         loaders: ['style', 'css', 'sass'],
       },
+      {
+        test: /\.css$/,
+        loaders: ['style', 'css', 'sass'],
+      },
     ],
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.DefinePlugin({
-      'process.env': {
-        'NODE_ENV': JSON.stringify('production'),
-      },
-    }),
   ],
 };

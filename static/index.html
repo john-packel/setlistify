@@ -2,10 +2,19 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="/static/style.css">
   </head>
   <body>
-    <div id='root'></div>
-    <script src="/static/bundle.js"></script>
+    <div class="main-content">
+      <a href="/auth/spotify">Login or whatevs</s>
+      <div class="setlist-url-form">
+        <form class="js-setlistfm-form">
+          <label for="url-field"></label>
+          <input type="text" id="url-field" placeholder="enter a setlist.fm url..." value="http://www.setlist.fm/setlist/joyce-manor/2016/irving-plaza-new-york-ny-1bfe4194.html" />
+          <button type="submit" class="setlist-url-form__submit">Submit</button>
+        </form>
+      </div>
+      <div class="playlist-preview"></div>
+    </div>
+    <script src="static/bundle.js"></script>
   </body>
 </html>

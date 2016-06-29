@@ -1,0 +1,24 @@
+* {
+  font-family: 'Fira Sans', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+input[type=text]{
+  font-size: 20px;
+}
+
+.main-content {
+  margin: 0 auto;
+  max-width: 660px;
+}
+
+.setlist-url-form {
+  display: flex;
+}
+
+.setlist-url-form__submit {
+  width: 200px;
+}
+
+.track {
+  display: flex;
+}
