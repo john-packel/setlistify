@@ -79,9 +79,11 @@ function renderTracks({ tracks }) {
 
 function renderTrack({ name }) {
   return (
-    `<div class="track">
-      <li class="track-name">${name}</li>
-      <div class="track-status">loading</div>
+    `<div class="panel">
+       <div class="track">
+        <li class="track-name">${name}</li>
+        <div class="track-status">loading</div>
+      </div>
     </div>`
   );
 }

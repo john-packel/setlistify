@@ -5,15 +5,18 @@
   </head>
   <body>
     <div class="main-content">
-      <a href="/auth/spotify">Login or whatevs</s>
-      <div class="setlist-url-form">
-        <form class="js-setlistfm-form">
+      <nav>
+        <h1 class="nav-title">Setlistify!</h1>
+        <a class="nav-login" href="/auth/spotify">Login With Spotify</a>
+      </nav>
+      <form class="js-setlistfm-form">
+        <div class="setlist-form">
           <label for="url-field"></label>
-          <input type="text" id="url-field" placeholder="enter a setlist.fm url..." value="http://www.setlist.fm/setlist/joyce-manor/2016/irving-plaza-new-york-ny-1bfe4194.html" />
-          <button type="submit" class="setlist-url-form__submit">Submit</button>
-        </form>
-      </div>
-      <div class="playlist-preview"></div>
+          <input type="text" class="setlist-form-url" id="url-field" placeholder="enter a setlist.fm url..." value="http://www.setlist.fm/setlist/joyce-manor/2016/irving-plaza-new-york-ny-1bfe4194.html" />
+          <input type="submit" class="setlist-form-submit" value="Find setlist"/>
+        </div>
+      </form>
+      <div class="playlist"></div>
     </div>
     <script src="static/bundle.js"></script>
   </body>
