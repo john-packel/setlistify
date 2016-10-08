@@ -6,9 +6,6 @@
       "amd": true,
       "jquery": true
     },
-    "plugins": [
-      "react"
-    ],
     "ecmaFeatures": {
       "arrowFunctions": true,
       "blockBindings": true,
