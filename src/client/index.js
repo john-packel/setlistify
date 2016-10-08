@@ -1,5 +1,5 @@
 import axios from 'axios';
-import _ from 'lodash';
+import get from 'lodash/get';
 import './app.scss';
 
 const setlistForm = document.querySelector('.js-setlistfm-form');
@@ -114,7 +114,7 @@ function searchTracks() {
       // It's not uncommon for a track search to return multiple results.
       // This isn't doing anything special yet and just picks the first item.
       // Eventually users should be able to pick between options.
-      const foundTrack = _.get(resp, 'data.tracks.items[0]', null);
+      const foundTrack = get(resp, 'data.tracks.items[0]', null);
       if (foundTrack) {
         $status.textContent = 'Found it :D';
         $track.classList.add('success');
