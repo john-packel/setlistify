@@ -26,7 +26,7 @@ if (process.env.NODE_ENV !== 'production') {
   }));
   app.use(webpackHotMiddleware(compiler));
 } else {
-  app.use('/static', express.static(path.join(__dirname, '../../dist')));
+  app.use('/public', express.static(path.join(__dirname, '../../dist')));
 }
 
 const spotifyApi = new SpotifyApi();
@@ -110,7 +110,7 @@ app.get('/api/v0/me', loggedIn, (req, res, next) => {
 });
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../../static/index.html'));
+  res.sendFile(path.join(__dirname, '../../public/index.html'));
 });
 
 app.use((err, req, res) => {

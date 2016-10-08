@@ -10,7 +10,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: '/static/',
+    publicPath: '/public/',
   },
   module: {
     loaders: [
@@ -26,7 +26,7 @@ module.exports = {
       {
         test: /\.(png|jpg)$/,
         loader: 'url?limit=25000',
-        include: path.join(__dirname, 'static'),
+        include: path.join(__dirname, 'public'),
       },
     ],
   },
